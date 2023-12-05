@@ -3,13 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet" />
     <title>World Clock - Shankland</title>
     <link rel="stylesheet" href="src/styles.css" class="style" />
   </head>
   <body>
     <div class="container">
       <h1>World Clocks</h1>
-      <select name="cities" id="cities">
+      <select name="select-cities" id="select-cities">
         <option value="">Select a City</option>
         <option value="Europe/Belfast">Belfast</option>
         <option value="Europe/Dublin">Dublin</option>
@@ -18,20 +25,26 @@
 
       <div></div>
 
-      <div>
-        <h2 class="seattle" id="seattle">Seattle 🇺🇸</h2>
-        <div class="date" id="date">December 5, 2023</div>
-        <div class="time" id="time">19:24:00 PM</div>
+      <div class="cities">
+        <div>
+          <h2 class="seattle" id="seattle">Seattle 🇺🇸</h2>
+          <div class="date" id="date">December 5, 2023</div>
+        </div>
+        <div class="time" id="time">19:24:00 <span id="am-pm">PM</span></div>
       </div>
-      <div>
-        <h2 class="edmonton" id="edmonton">Edmonton 🇨🇦</h2>
-        <div class="date" id="date">December 5, 2023</div>
-        <div class="time" id="time">19:24:00 PM</div>
+      <div class="cities">
+        <div>
+          <h2 class="edmonton" id="edmonton">Edmonton 🇨🇦</h2>
+          <div class="date" id="date">December 5, 2023</div>
+        </div>
+        <div class="time" id="time">19:24:00 <span id="am-pm">PM</span></div>
       </div>
-      <div>
-        <h2 class="barcelona" id="barcelona">Barcelona 🇪🇸</h2>
-        <div class="date" id="date">December 5, 2023</div>
-        <div class="time" id="time">19:24:00 PM</div>
+      <div class="cities">
+        <div>
+          <h2 class="barcelona" id="barcelona">Barcelona 🇪🇸</h2>
+          <div class="date" id="date">December 5, 2023</div>
+        </div>
+        <div class="time" id="time">19:24:00 <span id="am-pm">PM</span></div>
       </div>
     </div>
     <footer>
