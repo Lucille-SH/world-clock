@@ -32,22 +32,27 @@ function updateDate() {
 }
 
 function showSelectedCity(event) {
-  let selectedCity = document.querySelector(".selected-city");
-  let cityValue = event.target.value;
-  cityValue = cityValue.replace("_", " ").split("/")[1];
-  let cityDate = moment().tz(event.target.value).format("LL");
-  let cityTime = moment()
-    .tz("America/Edmonton")
-    .format("hh:mm:ss [<small>]A[</small>]");
+  let timeZone = event.target.value;
+  let icon = "🌍";
+  if (timeZone === "current") {
+    timeZone = moment.tz.guess();
+    icon = "📍";
+  }
 
+  let cityValue = timeZone.replace("_", " ").split("/")[1];
+  let cityDetails = moment().tz(timeZone);
+
+  let selectedCity = document.querySelector(".selected-city");
   selectedCity.classList.add("border");
 
-  selectedCity.innerHTML = `<div class="cities">
+  selectedCity.innerHTML = `<div class="cities city-style">
         <div>
-          <h2>${cityValue}</h2>
-          <div class="date" id="date">${cityDate}</div>
+          <h2>${cityValue} ${icon}</h2>
+          <div class="date" id="date">${cityDetails.format("LL")}</div>
         </div>
-        <div class="time" id="time">${cityTime}</div>
+        <div class="time" id="time">${cityDetails.format(
+          "hh:mm:ss [<small>]A[</small>]"
+        )}</div>
       </div>`;
 }
 
