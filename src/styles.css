@@ -51,6 +51,10 @@ h2 {
   font-weight: 500;
 }
 
+.border {
+  border-bottom: 2px dashed rgba(136, 93, 241, 0.2);
+}
+
 small {
   font-size: 20px;
   vertical-align: middle;
