@@ -5,7 +5,7 @@ function updateDate() {
   let formatDateA = moment().tz("Europe/Lisbon").format("LL");
   let formatTimeA = moment()
     .tz("Europe/Lisbon")
-    .format("hh:mm:ss [<small>]A[</small>]");
+    .format("hh:mm [<small>]A[</small>]");
 
   let edmontonElement = document.querySelector(".city-edmonton");
   let edmontonDateElement = edmontonElement.querySelector("#date");
@@ -13,7 +13,7 @@ function updateDate() {
   let formatDateB = moment().tz("America/Edmonton").format("LL");
   let formatTimeB = moment()
     .tz("America/Edmonton")
-    .format("hh:mm:ss [<small>]A[</small>]");
+    .format("hh:mm [<small>]A[</small>]");
 
   let losAngelesElement = document.querySelector(".city-los-angeles");
   let losAngelesDateElement = losAngelesElement.querySelector("#date");
@@ -21,7 +21,7 @@ function updateDate() {
   let formatDateC = moment().tz("America/Los_Angeles").format("LL");
   let formatTimeC = moment()
     .tz("America/Los_Angeles")
-    .format("hh:mm:ss [<small>]A[</small>]");
+    .format("hh:mm [<small>]A[</small>]");
 
   edmontonTimeElement.innerHTML = formatTimeB;
   edmontonDateElement.innerHTML = formatDateB;
@@ -51,7 +51,7 @@ function showSelectedCity(event) {
           <div class="date" id="date">${cityDetails.format("LL")}</div>
         </div>
         <div class="time" id="time">${cityDetails.format(
-          "hh:mm:ss [<small>]A[</small>]"
+          "hh:mm [<small>]A[</small>]"
         )}</div>
       </div>`;
 }
