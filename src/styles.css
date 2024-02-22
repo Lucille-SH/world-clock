@@ -24,10 +24,12 @@ h2 {
 }
 
 #select-cities {
-  width: 100%;
+  width: 80%;
   padding: 10px;
-  font-size: 18px;
+  font-size: 20px;
   border-radius: 3px;
+  display: block;
+  margin: 0 auto;
 }
 
 .cities {
@@ -70,4 +72,54 @@ footer {
   text-align: center;
   font-size: 13px;
   opacity: 0.8;
+}
+
+@media (max-width: 560px) {
+  h1 {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 500;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .container {
+    width: 80%;
+    padding: 10px;
+  }
+
+  #select-cities {
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 3px;
+  }
+
+  .cities {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 10px;
+  }
+
+  .date {
+    font-size: 13px;
+  }
+
+  .time {
+    font-size: 25px;
+  }
+
+  small {
+    font-size: 15px;
+    vertical-align: middle;
+  }
+
+  footer {
+    padding: 0 50px;
+    text-align: center;
+    font-size: 12px;
+    opacity: 0.8;
+  }
 }
